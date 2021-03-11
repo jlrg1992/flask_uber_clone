@@ -9,6 +9,3 @@ def hello_world():
 @app.route('/app/')
 def home():
     return render_template('index.html')
-@app.route('/assets/<path>')
-def get_assets(path):
-	return render_template('assets/'+path)
