@@ -1,23 +1,17 @@
 {% extends 'default_block.html' %}
-{% block title %}Inicio{% endblock %}
+{% block title %}Usuarios{% endblock %}
 {% block pageContent %}
         <div data-name="home" class="page">
           <div class="navbar">
+            <div class="navbar-bg"></div>
             <div class="navbar-inner">
-              <div class="title">{{ self.title() }}</div>
-            </div>
-          </div>
-
-          <div class="toolbar">
-            <div class="toolbar-inner">
-              Bottom toolbar
+              <div class="title">Bienvenid@ {{ usuario }}</div>
             </div>
           </div>
           <div class="page-content">
             <div class="block-title">Example block</div>
             <div class="block">
-              <p> <a href="./login">Log in</a></p>
-              <p> <a href="./signup">Sign up</a></p>
+              Este es un mensaje generico. Muuuy generico.
             </div>
           </div>
         </div>

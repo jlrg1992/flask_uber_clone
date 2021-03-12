@@ -1,0 +1,90 @@
+{% extends 'default_block.html' %}
+{% block title %}Registrarse{% endblock %}
+{% block pageContent %}
+        <div data-name="home" class="page">
+          <div class="navbar">
+            <div class="navbar-bg"></div>
+            <div class="navbar-inner">
+              <div class="title">{{ self.title ()}}</div>
+            </div>
+          </div>
+          <div class="page-content">
+            <div class="block">
+              <form class="list" action="#" method="post">
+                <ul>
+                  <li class="item-content item-input">
+                    <div class="item-inner">
+                      <div class="item-title item-floating-label">  Nombre(s):
+                      </div>
+                      <div class="item-input-wrap">
+                        <input type="text" name="nombres" required validate>
+                        <span class="input-clear-button"></span>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="item-content item-input">
+                    <div class="item-inner">
+                      <div class="item-title item-floating-label">  Apellidos:
+                      </div>
+                      <div class="item-input-wrap">
+                        <input type="text" name="apellidos" required validate>
+                        <span class="input-clear-button"></span>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="item-content item-input">
+                    <div class="item-inner">
+                      <div class="item-title item-floating-label">  Edad:
+                      </div>
+                      <div class="item-input-wrap">
+                        <input type="number" name="edad" required validate>
+                        <span class="input-clear-button"></span>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="item-content item-input">
+                    <div class="item-inner">
+                      <div class="item-title item-floating-label">  Teléfono:
+                      </div>
+                      <div class="item-input-wrap">
+                        <input type="tel" name="tel" required validate>
+                        <span class="input-clear-button"></span>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="item-content item-input">
+                    <div class="item-inner">
+                      <div class="item-title item-floating-label">  Correo electrónico:
+                      </div>
+                      <div class="item-input-wrap">
+                        <input type="email" name="mail" required validate>
+                        <span class="input-clear-button"></span>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="item-content item-input">
+                    <div class="item-inner">
+                      <div class="item-title item-floating-label">  Contraseña:
+                      </div>
+                      <div class="item-input-wrap">
+                        <input type="password" name="pass" required validate pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" data-error-message="Letra mayúscula, letra minúscula, dígito y >8 caracteres">
+                        <span class="input-clear-button"></span>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="item-content item-input">
+                    <label class="item-checkbox item-content">
+                      <input type="checkbox" name="demo-checkbox" value="terminos" required validate/>
+                      <i class="icon icon-checkbox"></i>
+                      <div class="item-inner">
+                        <div class="item-title">Acepto los <a onclick="goto('../terminos')">términos y condiciones.</a></div>
+                      </div>
+                  </li>
+                </ul>
+                <div class="block block-strong">
+                  <input type="submit" class="button button-large button-fill"/>
+                </div>
+            </form>
+          </div>
+        </div>
+{% endblock %}

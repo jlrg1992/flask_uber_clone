@@ -1,0 +1,45 @@
+{% extends 'default_block.html' %}
+{% block title %}Iniciar Sesión{% endblock %}
+{% block pageContent %}
+        <div data-name="home" class="page">
+          <div class="navbar">
+            <div class="navbar-bg"></div>
+            <div class="navbar-inner">
+              <div class="title">{{ self.title ()}}</div>
+            </div>
+          </div>
+          <div class="page-content">
+            <form class="list" action="#" method="post">
+                <ul>
+                  <li class="item-content item-input">
+                    <div class="item-inner">
+                      <div class="item-title item-floating-label">  Correo electrónico:
+                      </div>
+                      <div class="item-input-wrap">
+                        <input type="email" name="mail" required validate>
+                        <span class="input-clear-button"></span>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="item-content item-input">
+                    <div class="item-inner">
+                      <div class="item-title item-floating-label">  Contraseña:
+                      </div>
+                      <div class="item-input-wrap">
+                        <input type="password" name="pass" required validate>
+                        <span class="input-clear-button"></span>
+                      </div>
+                    </div>
+                  </li>
+                </ul>
+                <div class="block block-strong">
+                  <input type="submit" class="button button-large button-fill"/>
+                </div>
+                <div class="block block-strong">
+                  <p>¿No tienes cuenta? Creala <a onclick='goto("../signup")'>aquí!!!!!</a></p>
+                </div>
+            </form>
+
+          </div>
+        </div>
+{% endblock %}
