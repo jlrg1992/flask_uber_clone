@@ -42,4 +42,15 @@
 
           </div>
         </div>
+        <script>
+        let messages = [];
+{% with messages = get_flashed_messages() %}
+  {% if messages %}
+    {% for msg in messages %}
+
+        messages.push("{{msg}}");
+    {% endfor %}
+  {% endif %}
+{% endwith %}
+</script>
 {% endblock %}

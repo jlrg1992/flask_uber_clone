@@ -19,3 +19,11 @@ var mainView = app.views.create('.view-main');
 function goto(url){
   window.location.replace(url);
 }
+
+
+dialog = app.dialog
+if(typeof messages !== 'undefined'){
+  for(msg of messages){
+    dialog.alert(msg);
+  }
+}
